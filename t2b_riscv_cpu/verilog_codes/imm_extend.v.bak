@@ -1,0 +1,25 @@
+
+// imm_ext.v - logic for immediate extension
+
+module imm_extend (
+    input  [31:0]     instr,
+    input  [ 1:0]     immsrc,
+    output reg [31:0] immext
+);
+
+always @(*) begin
+    case(immsrc)
+        // I−type or U-type 
+        2'b00:begin if ((instr[6:0]==2'b0010111)) | (instr[6:0]== 2'b0110111)) immext = {instr[31:12],12'b0}; //for auipc and lui
+             else  immext = {{20{instr[31]}}, instr[31:20]}; //for I-type
+        // S−type (stores)
+        2'b01:   immext = {{20{instr[31]}}, instr[31:25], instr[11:7]};
+        // B−type (branches)
+        2'b10:   immext = {{20{instr[31]}}, instr[7], instr[30:25], instr[11:8], 1'b0};
+        // J−type (jal)
+        2'b11:   immext = {{12{instr[31]}}, instr[19:12], instr[20], instr[30:21], 1'b0};
+        default: immext = 32'bx; // undefined
+    endcase
+end
+
+endmodule
