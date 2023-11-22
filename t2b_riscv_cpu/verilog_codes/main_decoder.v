@@ -40,7 +40,7 @@ always @(*) begin
         7'b1100111: controls = 17'b1_00_1_0_10_0_00_0_00_010_1; // jalr
         7'b1101111: controls = 17'b1_11_0_0_10_0_00_1_00_010_0; // jal
         7'b0010111: controls = 17'b1_xx_x_0_11_0_00_0_00_010_0; // auipc
-        7'b0110111: controls = 17'b1_xx_x_0_11_0_00_0_00_010_0; // auipc
+        7'b0110111: controls = 17'b1_xx_x_0_11_0_00_0_00_010_0; // lui
         default:    controls = 17'bx_xx_x_x_xx_x_xx_x_xx_xxx_x; // ???
     endcase
 

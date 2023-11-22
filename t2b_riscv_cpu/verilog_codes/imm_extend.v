@@ -5,12 +5,14 @@ module imm_extend (
     input  [31:7]     instr,
     input  [ 1:0]     immsrc,
     output reg [31:0] immext
+	 
 );
+
 
 always @(*) begin
     case(immsrc)
         // I−type
-        2'b00:   immext = {{20{instr[31]}}, instr[31:20]};
+        2'b00:   immext = {{20{1'b0}}, instr[31:20]};
         // S−type (stores)
         2'b01:   immext = {{20{instr[31]}}, instr[31:25], instr[11:7]};
         // B−type (branches)

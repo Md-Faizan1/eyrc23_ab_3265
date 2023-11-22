@@ -23,7 +23,7 @@ always @(a, b, alu_ctrl) begin
         4'b0111: alu_out <= a >> b[4:0];   // srl
         4'b0100: alu_out <= a << b[4:0];   // sll
         4'b1000: alu_out <= a >>> b[4:0];  // sra
-        4'b1001: alu_out <= (a+b-3);  // sb and sw
+//        4'b1001: alu_out <= (a+b);  // sb and sw
         default: alu_out = 0;
     endcase
 end

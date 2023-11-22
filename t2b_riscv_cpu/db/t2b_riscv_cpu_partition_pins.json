@@ -296,6 +296,102 @@
 					"strict" : false
 				},
 				{
+					"name" : "ReadData[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ReadData[31]",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},

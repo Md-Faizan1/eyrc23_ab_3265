@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Nov 14 12:32:41 2023
+Analysis & Synthesis Status : Successful - Wed Nov 22 22:08:49 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : t2b_riscv_cpu
 Top-level Entity Name : t2b_riscv_cpu
 Family : Cyclone IV E
-Total logic elements : 5,078
-    Total combinational functions : 4,084
-    Dedicated logic registers : 1,568
-Total registers : 1568
+Total logic elements : 7,071
+    Total combinational functions : 6,079
+    Dedicated logic registers : 3,104
+Total registers : 3104
 Total pins : 164
 Total virtual pins : 0
 Total memory bits : 0

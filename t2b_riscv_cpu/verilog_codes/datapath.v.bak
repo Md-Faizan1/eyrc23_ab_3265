@@ -19,7 +19,6 @@ module datapath (
 wire [31:0] PCNext, PCNextJalr, PCPlus4, PCTarget;
 wire [31:0] ImmExt, SrcA, SrcB, Result, WriteData, ALUResult;
 wire [31:0] ReadDataMem, AUIPc, URd;
-wire [2:0] func3;
 
 // next PC logic
 // Confused with JAlR
@@ -45,7 +44,7 @@ mux2 #(32)     srcbmux (WriteData, ImmExt, ALUSrc, SrcB);
 alu            alu (SrcA, SrcB, ALUControl, ALUResult, Zero);
 
 // load data
-load_extend     ldextd (ReadData, Load, ReadDataMem,Mem_WrAddr);
+load_extend     ldextd (ReadData, Load, ReadDataMem);
 
 // lui and auipc
 adder       auipcadd  (PC, {Instr[31:12], 12'b0}, AUIPc);
