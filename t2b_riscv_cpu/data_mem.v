@@ -11,6 +11,7 @@
  // array of 64 32-bit words or data
  
  reg [31:0] data_ram [0:63] ;
+ // added a word here
  
  initial begin
     data_ram[0]  = 32'b0;
