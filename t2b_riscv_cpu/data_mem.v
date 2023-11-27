@@ -12,6 +12,7 @@
  
  reg [31:0] data_ram [0:63] ;
  // added a word here
+ // added by sumit
  
  initial begin
     data_ram[0]  = 32'b0;
