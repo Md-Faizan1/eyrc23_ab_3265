@@ -1,6 +1,6 @@
 
 // instr_mem.v - instruction memory for single-cycle RISC-V CPU
-
+// instruction mem changed
 module instr_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 512) (
     input       [ADDR_WIDTH-1:0] instr_addr,
     output      [DATA_WIDTH-1:0] instr
