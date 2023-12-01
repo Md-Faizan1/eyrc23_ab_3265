@@ -8,7 +8,7 @@
 	  input			[2:0] funct
  );
 
- // array of 64 32-bit words or data
+ // array of 64, 32-bit words or data
  
  reg [31:0] data_ram [0:63] ;
  // added a word here
