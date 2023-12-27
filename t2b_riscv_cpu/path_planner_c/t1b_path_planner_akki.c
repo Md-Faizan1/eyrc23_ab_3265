@@ -10,7 +10,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
-#include <limits.h>
 
 #define VERTICES 30 // Number of vertices in the graph
 
@@ -51,7 +50,8 @@ void print_output(uint8_t num) {
     while (index > 0) { putchar(buffer[--index]); }
     _put_byte('\n');
 }
-
+/// @brief 
+/// @param val 
 void _put_value(uint8_t val) { print_output(val); }
 
 #else  // for the test device
@@ -84,61 +84,6 @@ Examples:
 //*************************************************************************************************************
 
 
-// Function to find the vertex with the minimum distance value
-int minDistance(int dist[], bool visited[]) {
-    int min = INT_MAX, min_index;
-
-    for (int v = 0; v < VERTICES; v++) {
-        if (!visited[v] && dist[v] < min) {
-            min = dist[v];
-            min_index = v;
-        }
-    }
-
-    return min_index;
-}
-
-// Function to print the shortest path from start to end and store it in path_planned
-void findShortestPath(int parent[], int end, uint8_t path_planned[], uint8_t* idx) {
-    if (parent[end] == -1) {
-        path_planned[(*idx)++] = end;
-        return;
-    }
-
-    findShortestPath(parent, parent[end], path_planned, idx);
-    path_planned[(*idx)++] = end;
-}
-
-// Function to find and print the shortest path using Dijkstra's algorithm
-void dijkstra(bool **graph, int start, int end, uint8_t path_planned[], uint8_t* idx) {
-    int dist[VERTICES];
-    bool visited[VERTICES];
-    int parent[VERTICES];
-
-    for (int i = 0; i < VERTICES; i++) {
-        dist[i] = INT_MAX;
-        visited[i] = false;
-        parent[i] = -1;
-    }
-
-    dist[start] = 0;
-
-    for (int count = 0; count < VERTICES - 1; count++) {
-        int u = minDistance(dist, visited);
-        visited[u] = true;
-
-        for (int v = 0; v < VERTICES; v++) {
-            if (!visited[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] < dist[v]) {
-                dist[v] = dist[u] + graph[u][v];
-                parent[v] = u;
-            }
-        }
-    }
-
-    (*idx) = 0; // Initialize the path length
-    findShortestPath(parent, end, path_planned, idx);
-}
-
 
 
 //*************************************************************************************************************
@@ -147,7 +92,7 @@ void dijkstra(bool **graph, int start, int end, uint8_t path_planned[], uint8_t*
 
 
 // main function
-int main(int argc, char const *argv[]) {
+int main(int argc, char const * argv[]) {
 
 #ifdef __linux__
 
@@ -166,80 +111,37 @@ int main(int argc, char const *argv[]) {
 #endif
 
     // array to store the planned path
-    uint8_t path_planned[32];
+    int path_planned[32];
     // index to keep track of the path_planned array
-    uint8_t idx = 0;
+    uint8_t idx = 10;
 
     // ############# Add your code here #############
 
+// int graph[2]={0,1};
 
-
-
-
-
-
-    bool graph_data[VERTICES][VERTICES] = {
-
-        //  0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
-        {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-        {0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-
-        {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-
-
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
-
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-        {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1},
-        {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-
-    };
-
-    bool** graph = (bool**)calloc(VERTICES, sizeof(bool*));
-    for (int i = 0; i < VERTICES; ++i) {
-        graph[i] = (bool*)calloc(VERTICES, sizeof(bool));
-    }
-
-    // Copy values from the statically defined array to the dynamically allocated array
-    for (int i = 0; i < VERTICES; ++i) {
-        for (int j = 0; j < VERTICES; ++j) {
-            graph[i][j] = (bool)graph_data[i][j];
-        }
-    }
-
-    dijkstra(graph, START_POINT, END_POINT, path_planned, &idx);
-
-
-    // for deallocating the memory
-    for (int i = 0; i < VERTICES; ++i) {
-        free(graph[i]);
-    }
-    free(graph);
+//     path_planned[0]=0;
+//     path_planned[1]=1;
+//     path_planned[2]=256;
+//     path_planned[3]=8;
+//     path_planned[4]=7;
+// path_planned[5]=0;
+// path_planned[6]=1;
+// path_planned[7]=2;
+// path_planned[8]=8;
+// path_planned[9]=7;
+    int *ptr;
+    ptr=&path_planned[0];
+    *(ptr)=0;
+    *(ptr+1)=1;
+    *(ptr+2)=2;
+    *(ptr+3)=3;
+    *(ptr+4)=4;
+    *(ptr+5)=30;
+    *(ptr+6)=6;
+    *(ptr+7)=7;
+    *(ptr+8)=8;
+    *(ptr+9)=9;
+    // *(ptr+10)=10
 
 
     // ##############################################
@@ -249,8 +151,9 @@ int main(int argc, char const *argv[]) {
         NODE_POINT = path_planned[i];
     }
     // Path Planning Computation Done Flag
+    
+  
     CPU_DONE = 1;
-
 #ifdef __linux__    // for host pc
 
     _put_str("######### Planned Path #########\n");

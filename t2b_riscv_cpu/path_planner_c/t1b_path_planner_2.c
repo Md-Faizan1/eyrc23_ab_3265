@@ -82,14 +82,28 @@ Examples:
 
 
 //*************************************************************************************************************
-
-// This function adds an edge to the adjacency matrix
-void add_edge(int graph[], int u, int v) {
-    graph[u] |= (1 << v);
-    graph[v] |= (1 << u);
+int heuristic(int current, int end) {
+    // You need to define a heuristic function here.
+    // It should estimate the cost from the current node to the end node.
+    // This function should be admissible, meaning it should never overestimate the cost.
+    // The heuristic function can be Manhattan distance, Euclidean distance, etc.
+    // For simplicity, let's use Euclidean distance here.
+    return static_cast<int>(sqrt(pow((current % 5) - (end % 5), 2) + pow((current / 5) - (end / 5), 2)));
 }
 
-// Function to print the shortest path from start to end and store it in path_planned
+int minDistance(int dist[], bool visited[]) {
+    int min = INT_MAX, min_index;
+
+    for (int v = 0; v < VERTICES; v++) {
+        if (!visited[v] && dist[v] < min) {
+            min = dist[v];
+            min_index = v;
+        }
+    }
+
+    return min_index;
+}
+
 void findShortestPath(int parent[], int end, uint8_t path_planned[], uint8_t* idx) {
     if (parent[end] == -1) {
         path_planned[(*idx)++] = end;
@@ -100,40 +114,34 @@ void findShortestPath(int parent[], int end, uint8_t path_planned[], uint8_t* id
     path_planned[(*idx)++] = end;
 }
 
-// Function to find and print the shortest path using Dijkstra's algorithm
-void dijkstra(int graph[], int start, int end, uint8_t path_planned[], uint8_t* idx) {
-    int dist[VERTICES];  // Array to store the shortest distances from src to i
-    // bool visited[VERTICES];
-    int parent[VERTICES];  // Array to store the parents in the shortest path
+void astar(bool graph[][VERTICES], int start, int end, uint8_t path_planned[], uint8_t* idx) {
+    int dist[VERTICES];
+    bool visited[VERTICES];
+    int parent[VERTICES];
 
-
-    // Initialize all distances as INFINITE and no parent
     for (int i = 0; i < VERTICES; i++) {
         dist[i] = INT_MAX;
+        visited[i] = false;
         parent[i] = -1;
     }
 
-    // Distance from source to itself is always 0
     dist[start] = 0;
-    // _put_str("######### Chk 2 #########\n");
 
-    // Relax edges repeatedly
-    for (int k = 0; k < VERTICES - 1; ++k) {
-        for (int i = 0; i < VERTICES; ++i) {
-            for (int j = 0; j < VERTICES; ++j) {
-                if (((bool)(graph[i] & (1 << j))) != 0 && dist[i] != INT_MAX && dist[i] + ((bool)(graph[i] & (1 << j))) < dist[j]) {
-                    dist[j] = dist[i] + ((bool)(graph[i] & (1 << j)));
-                    parent[j] = i;
-                }
+    for (int count = 0; count < VERTICES - 1; count++) {
+        int u = minDistance(dist, visited);
+        visited[u] = true;
+
+        for (int v = 0; v < VERTICES; v++) {
+            if (!visited[v] && graph[u][v] && dist[u] != INT_MAX && dist[u] + graph[u][v] < dist[v]) {
+                dist[v] = dist[u] + graph[u][v] + heuristic(v, end);
+                parent[v] = u;
             }
         }
     }
 
-    (*idx) = 0; // Initialize the path length
-    // _put_str("######### Chk 3 #########\n");
+    (*idx) = 0;
     findShortestPath(parent, end, path_planned, idx);
 }
-
 
 
 //*************************************************************************************************************
@@ -168,47 +176,52 @@ int main(int argc, char const * argv[]) {
     // ############# Add your code here #############
 
 
-     int graph [VERTICES] = {0};
+  bool graph[VERTICES][VERTICES] = {
 
-    // Add edges to the adjacency matrix
-    add_edge(graph, 0, 1);
-    add_edge(graph, 1, 2);
-    add_edge(graph, 1, 29);
-    add_edge(graph, 2, 3);
-    add_edge(graph, 2, 8);
-    add_edge(graph, 3, 4);
-    add_edge(graph, 3, 28);
-    add_edge(graph, 4, 5);
-    add_edge(graph, 4, 6);
-    add_edge(graph, 6, 7);
-    add_edge(graph, 7, 8);
-    add_edge(graph, 8, 9);
-    add_edge(graph, 8, 12);
-    add_edge(graph, 9, 10);
-    add_edge(graph, 9, 11);
-    add_edge(graph, 12, 13);
-    add_edge(graph, 12, 19);
-    add_edge(graph, 13, 14);
-    add_edge(graph, 14, 15);
-    add_edge(graph, 14, 16);
-    add_edge(graph, 16, 17);
-    add_edge(graph, 16, 18);
-    add_edge(graph, 18, 19);
-    add_edge(graph, 19, 20);
-    add_edge(graph, 20, 21);
-    add_edge(graph, 20, 24);
-    add_edge(graph, 20, 29);
-    add_edge(graph, 21, 22);
-    add_edge(graph, 21, 23);
-    add_edge(graph, 24, 25);
-    add_edge(graph, 25, 26);
-    add_edge(graph, 26, 27);
-    add_edge(graph, 26, 28);
-    add_edge(graph, 28, 29);
+     //  0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+        {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+        {0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+
+        {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+
+
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
+        {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1},
+        {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+
+    };
 
     // _put_str("######### Chk 1 #########\n");
 
-    dijkstra(graph, START_POINT, END_POINT, path_planned, &idx);
+   astar(graph, START_POINT, END_POINT, path_planned, &idx);
+
     // _put_str("######### Chk last #########\n");
 
     // ##############################################
