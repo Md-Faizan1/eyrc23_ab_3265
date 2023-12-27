@@ -1,5 +1,6 @@
 
 // riscv_cpu.v - single-cycle RISC-V CPU Processor
+// riscv cpu processor implementation
 
 module riscv_cpu (
     input         clk, reset,
