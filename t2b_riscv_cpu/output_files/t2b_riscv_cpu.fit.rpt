@@ -1,5 +1,5 @@
 Fitter report for t2b_riscv_cpu
-Mon Nov 13 23:28:30 2023
+Mon Dec 18 11:11:21 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,17 +59,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Failed - Mon Nov 13 23:28:30 2023           ;
+; Fitter Status                      ; Failed - Mon Dec 18 11:11:21 2023           ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; t2b_riscv_cpu                               ;
 ; Top-level Entity Name              ; t2b_riscv_cpu                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 7,924 / 22,320 ( 36 % )                     ;
-;     Total combinational functions  ; 4,915 / 22,320 ( 22 % )                     ;
-;     Dedicated logic registers      ; 3,108 / 22,320 ( 14 % )                     ;
-; Total registers                    ; 3108                                        ;
+; Total logic elements               ; 7,055 / 22,320 ( 32 % )                     ;
+;     Total combinational functions  ; 6,063 / 22,320 ( 27 % )                     ;
+;     Dedicated logic registers      ; 3,104 / 22,320 ( 14 % )                     ;
+; Total registers                    ; 3104                                        ;
 ; Total pins                         ; 164 / 154 ( 106 % )                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
@@ -147,7 +147,7 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 7           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
@@ -157,6 +157,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -166,8 +167,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 8365 ) ; 0.00 % ( 0 / 8365 )        ; 0.00 % ( 0 / 8365 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 8365 ) ; 0.00 % ( 0 / 8365 )        ; 0.00 % ( 0 / 8365 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 9508 ) ; 0.00 % ( 0 / 9508 )        ; 0.00 % ( 0 / 9508 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 9508 ) ; 0.00 % ( 0 / 9508 )        ; 0.00 % ( 0 / 9508 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -190,7 +191,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 8355 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 9498 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -200,23 +201,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 7,924 / 22,320 ( 36 % ) ;
-;     -- Combinational with no register       ; 4816                    ;
-;     -- Register only                        ; 3009                    ;
-;     -- Combinational with a register        ; 99                      ;
+; Total logic elements                        ; 7,055 / 22,320 ( 32 % ) ;
+;     -- Combinational with no register       ; 3951                    ;
+;     -- Register only                        ; 992                     ;
+;     -- Combinational with a register        ; 2112                    ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 4466                    ;
-;     -- 3 input functions                    ; 361                     ;
-;     -- <=2 input functions                  ; 88                      ;
-;     -- Register only                        ; 3009                    ;
+;     -- 4 input functions                    ; 3251                    ;
+;     -- 3 input functions                    ; 2687                    ;
+;     -- <=2 input functions                  ; 125                     ;
+;     -- Register only                        ; 992                     ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 4743                    ;
+;     -- normal mode                          ; 5891                    ;
 ;     -- arithmetic mode                      ; 172                     ;
 ;                                             ;                         ;
-; Total registers*                            ; 3,108 / 23,018 ( 14 % ) ;
-;     -- Dedicated logic registers            ; 3,108 / 22,320 ( 14 % ) ;
+; Total registers*                            ; 3,104 / 23,018 ( 13 % ) ;
+;     -- Dedicated logic registers            ; 3,104 / 22,320 ( 14 % ) ;
 ;     -- I/O registers                        ; 0 / 698 ( 0 % )         ;
 ;                                             ;                         ;
 ; Total LABs                                  ; Not available           ;
@@ -237,10 +238,10 @@ https://fpgasoftware.intel.com/eula.
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Maximum fan-out                             ; 3100                    ;
-; Highest non-global fan-out                  ; 590                     ;
-; Total fan-out                               ; 28780                   ;
-; Average fan-out                             ; 3.44                    ;
+; Maximum fan-out                             ; 3096                    ;
+; Highest non-global fan-out                  ; 2048                    ;
+; Total fan-out                               ; 35051                   ;
+; Average fan-out                             ; 3.69                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -251,7 +252,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name              ; Pin #      ; I/O Bank ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; Ext_DataAdr[0]    ; Unassigned ; --       ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_DataAdr[0]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[10]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[11]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[12]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
@@ -262,7 +263,7 @@ https://fpgasoftware.intel.com/eula.
 ; Ext_DataAdr[17]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[18]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[19]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_DataAdr[1]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_DataAdr[1]    ; Unassigned ; --       ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[20]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[21]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[22]   ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
@@ -279,11 +280,11 @@ https://fpgasoftware.intel.com/eula.
 ; Ext_DataAdr[3]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[4]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[5]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_DataAdr[6]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_DataAdr[7]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_DataAdr[6]    ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_DataAdr[7]    ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[8]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_DataAdr[9]    ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_MemWrite      ; Unassigned ; --       ; 27                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_MemWrite      ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[0]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[10] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[11] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
@@ -291,24 +292,24 @@ https://fpgasoftware.intel.com/eula.
 ; Ext_WriteData[13] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[14] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[15] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[16] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[17] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[18] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[19] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[16] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[17] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[18] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[19] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[1]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[20] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[21] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[22] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[23] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[24] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[25] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[26] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[27] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[28] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[29] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[20] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[21] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[22] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[23] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[24] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[25] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[26] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[27] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[28] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[29] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[2]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[30] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; Ext_WriteData[31] ; Unassigned ; --       ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[30] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; Ext_WriteData[31] ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[3]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[4]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[5]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
@@ -316,8 +317,8 @@ https://fpgasoftware.intel.com/eula.
 ; Ext_WriteData[7]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[8]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; Ext_WriteData[9]  ; Unassigned ; --       ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; clk               ; Unassigned ; --       ; 3108                  ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; reset             ; Unassigned ; --       ; 95                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; clk               ; Unassigned ; --       ; 3104                  ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; reset             ; Unassigned ; --       ; 72                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +-------------------+------------+----------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -1066,8 +1067,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------+-------------+---------------------------+---------------+-------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                              ; Entity Name   ; Library Name ;
 +-------------------------------+-------------+---------------------------+---------------+-------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------+---------------+--------------+
-; |t2b_riscv_cpu                ; 0 (0)       ; 3108 (0)                  ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 164  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu                                                   ; t2b_riscv_cpu ; work         ;
-;    |data_mem:dmem|            ; 0 (0)       ; 2052 (2052)               ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|data_mem:dmem                                     ; data_mem      ; work         ;
+; |t2b_riscv_cpu                ; 0 (0)       ; 3104 (0)                  ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 164  ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu                                                   ; t2b_riscv_cpu ; work         ;
+;    |data_mem:dmem|            ; 0 (0)       ; 2048 (2048)               ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|data_mem:dmem                                     ; data_mem      ; work         ;
 ;    |instr_mem:imem|           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|instr_mem:imem                                    ; instr_mem     ; work         ;
 ;    |riscv_cpu:rvsingle|       ; 0 (0)       ; 1056 (0)                  ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle                                ; riscv_cpu     ; work         ;
 ;       |controller:c|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|controller:c                   ; controller    ; work         ;
@@ -1081,6 +1082,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;          |imm_extend:ext|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|datapath:dp|imm_extend:ext     ; imm_extend    ; work         ;
 ;          |load_extend:ldextd| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|datapath:dp|load_extend:ldextd ; load_extend   ; work         ;
 ;          |mux2:luipcmux|      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|datapath:dp|mux2:luipcmux      ; mux2          ; work         ;
+;          |mux2:pcjalrmux|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|datapath:dp|mux2:pcjalrmux     ; mux2          ; work         ;
 ;          |mux2:srcbmux|       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|datapath:dp|mux2:srcbmux       ; mux2          ; work         ;
 ;          |mux4:resultmux|     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|datapath:dp|mux4:resultmux     ; mux4          ; work         ;
 ;          |reg_file:rf|        ; 0 (0)       ; 1024 (1024)               ; 0 (0)         ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |t2b_riscv_cpu|riscv_cpu:rvsingle|datapath:dp|reg_file:rf        ; reg_file      ; work         ;
@@ -1341,78 +1343,76 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                         ; Location   ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; MemWrite~0                                                   ; Unassigned ; 69      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; clk                                                          ; Unassigned ; 9       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk                                                          ; Unassigned ; 3100    ; Clock        ; yes    ; Global Clock         ; Not Available    ; --                        ;
-; data_mem:dmem|data_ram~3436                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3438                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3440                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3442                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3444                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3446                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3448                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3450                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3452                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3454                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3456                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3458                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3460                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3462                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3464                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3466                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3467                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3468                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3469                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3470                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3471                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3472                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3473                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3474                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3475                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3476                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3477                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3478                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3479                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3480                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3481                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3482                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3483                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3484                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3485                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3486                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3487                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3488                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3489                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3490                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3491                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3492                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3493                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3494                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3495                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3496                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3497                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3498                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3499                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3500                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3501                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3502                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3503                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3504                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3505                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3506                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3507                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3508                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3509                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3510                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3511                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3512                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3513                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; data_mem:dmem|data_ram~3514                                  ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                                                          ; Unassigned ; 3096    ; Clock        ; yes    ; Global Clock         ; Not Available    ; --                        ;
+; data_mem:dmem|Equal0~0                                       ; Unassigned ; 2048    ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[0][2]~161                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[10][6]~146                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[11][5]~152                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[12][4]~173                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[13][6]~170                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[14][4]~167                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[15][4]~176                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[16][3]~113                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[17][7]~89                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[18][6]~101                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[19][6]~125                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[1][0]~155                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[20][1]~110                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[21][0]~83                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[22][2]~98                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[23][6]~119                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[24][7]~107                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[25][6]~86                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[26][2]~95                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[27][4]~122                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[28][0]~116                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[29][4]~92                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[2][5]~158                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[30][5]~104                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[31][3]~128                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[32][4]~65                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[33][5]~62                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[34][0]~59                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[35][6]~68                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[36][0]~53                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[37][7]~47                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[38][3]~50                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[39][1]~56                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[3][1]~164                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[40][0]~41                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[41][2]~38                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[42][5]~35                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[43][5]~44                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[44][7]~77                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[45][2]~71                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[46][2]~74                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[47][0]~80                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[48][3]~209                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[49][7]~197                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[4][3]~137                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[50][5]~185                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[51][7]~221                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[52][2]~203                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[53][4]~194                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[54][1]~179                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[55][7]~218                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[56][0]~206                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[57][7]~191                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[58][0]~182                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[59][1]~215                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[5][3]~134                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[60][5]~212                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[61][6]~200                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[62][7]~188                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[63][7]~224                            ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[6][3]~131                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[7][3]~140                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[8][1]~149                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; data_mem:dmem|data_ram[9][3]~143                             ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; reset                                                        ; Unassigned ; 32      ; Async. clear ; yes    ; Global Clock         ; Not Available    ; --                        ;
-; riscv_cpu:rvsingle|controller:c|main_decoder:md|Selector21~0 ; Unassigned ; 14      ; Latch enable ; yes    ; Global Clock         ; Not Available    ; --                        ;
+; riscv_cpu:rvsingle|controller:c|main_decoder:md|Selector21~0 ; Unassigned ; 16      ; Latch enable ; yes    ; Global Clock         ; Not Available    ; --                        ;
 ; riscv_cpu:rvsingle|controller:c|main_decoder:md|controls[0]  ; Unassigned ; 34      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~1985 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~1987 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~1989 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~1991 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~1993 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
@@ -1427,9 +1427,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2011 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2013 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2015 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2016 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2017 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2018 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2019 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2020 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2021 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
@@ -1443,7 +1441,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2029 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2030 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2031 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[1]~40        ; Unassigned ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2032 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2033 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2034 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; riscv_cpu:rvsingle|datapath:dp|reg_file:rf|reg_file_arr~2035 ; Unassigned ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[0]~30        ; Unassigned ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------------------+------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1452,24 +1454,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------+------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                         ; Location   ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------------------------------+------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; clk                                                          ; Unassigned ; 3100    ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
+; clk                                                          ; Unassigned ; 3096    ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
 ; reset                                                        ; Unassigned ; 32      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
-; riscv_cpu:rvsingle|controller:c|main_decoder:md|Selector21~0 ; Unassigned ; 14      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
+; riscv_cpu:rvsingle|controller:c|main_decoder:md|Selector21~0 ; Unassigned ; 16      ; 0                                    ; Global Clock         ; Not Available    ; --                        ;
 +--------------------------------------------------------------+------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+-----------+---------------------+
-; Name      ; Fan-Out             ;
-+-----------+---------------------+
-; DataAdr~6 ; 590                 ;
-; DataAdr~7 ; 590                 ;
-; DataAdr~4 ; 563                 ;
-; DataAdr~5 ; 563                 ;
-; DataAdr~3 ; 559                 ;
-; DataAdr~2 ; 558                 ;
-+-----------+---------------------+
++----------------------------------+
+; Non-Global High Fan-Out Signals  ;
++------------------------+---------+
+; Name                   ; Fan-Out ;
++------------------------+---------+
+; data_mem:dmem|Equal0~0 ; 2048    ;
++------------------------+---------+
 
 
 +------------------------------------------+
@@ -1758,38 +1755,38 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location F16
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Critical Warning (169085): No exact pin location assignment(s) for 164 pins of 164 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
-Warning (335093): The Timing Analyzer is analyzing 14 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 16 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 't2b_riscv_cpu.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n)) File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 18
+Info (176353): Automatically promoted node clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n)) File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 18
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[9] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[8] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[7] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[6] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[2] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[3] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[4] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[5] File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
-Info (176353): Automatically promoted node riscv_cpu:rvsingle|controller:c|main_decoder:md|Selector21~0  File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/verilog_codes/main_decoder.v Line: 19
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[9] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[7] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[6] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[2] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[3] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[4] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[5] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+        Info (176357): Destination node riscv_cpu:rvsingle|datapath:dp|reset_ff:pcreg|q[8] File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v Line: 12
+Info (176353): Automatically promoted node riscv_cpu:rvsingle|controller:c|main_decoder:md|Selector21~0  File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/main_decoder.v Line: 19
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node reset~input (placed in PIN M2 (CLK2, DIFFCLK_1p)) File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 18
+Info (176353): Automatically promoted node reset~input (placed in PIN M2 (CLK2, DIFFCLK_1p)) File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 18
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node MemWrite~0 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 21
-        Info (176357): Destination node MemWrite~1 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 21
-        Info (176357): Destination node WriteData~16 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
-        Info (176357): Destination node WriteData~26 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
-        Info (176357): Destination node WriteData~27 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
-        Info (176357): Destination node WriteData~28 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
-        Info (176357): Destination node WriteData~29 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
-        Info (176357): Destination node WriteData~30 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
-        Info (176357): Destination node WriteData~31 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
-        Info (176357): Destination node WriteData~32 File: D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node MemWrite~0 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 21
+        Info (176357): Destination node MemWrite~1 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 21
+        Info (176357): Destination node DataAdr~0 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node DataAdr~1 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node DataAdr~2 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node DataAdr~3 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node DataAdr~4 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node DataAdr~5 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node DataAdr~6 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
+        Info (176357): Destination node DataAdr~7 File: D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v Line: 22
         Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1819,19 +1816,19 @@ Info (176215): I/O bank details after I/O pin placement
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
 Error (176205): Can't place 162 pins with 2.5 V I/O standard because Fitter has only 147 such free pins available for general purpose I/O placement
 Error (176204): Can't place pins due to device constraints
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
 Error (171000): Can't fit design in device
-Info (144001): Generated suppressed messages file D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/output_files/t2b_riscv_cpu.fit.smsg
+Info (144001): Generated suppressed messages file D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/output_files/t2b_riscv_cpu.fit.smsg
 Error: Quartus Prime Fitter was unsuccessful. 3 errors, 6 warnings
-    Error: Peak virtual memory: 5323 megabytes
-    Error: Processing ended: Mon Nov 13 23:28:30 2023
-    Error: Elapsed time: 00:00:08
+    Error: Peak virtual memory: 5330 megabytes
+    Error: Processing ended: Mon Dec 18 11:11:21 2023
+    Error: Elapsed time: 00:00:09
     Error: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/RISC_V/ab#3265_Task2B/ab#3265_Task2B/t2b_riscv_cpu/output_files/t2b_riscv_cpu.fit.smsg.
+The suppressed messages can be found in D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/output_files/t2b_riscv_cpu.fit.smsg.
 
 

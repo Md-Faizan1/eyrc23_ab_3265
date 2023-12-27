@@ -136,7 +136,7 @@ int main(int argc, char const * argv[]) {
     *(ptr+2)=2;
     *(ptr+3)=3;
     *(ptr+4)=4;
-    *(ptr+5)=500000;
+    *(ptr+5)=30;
     *(ptr+6)=6;
     *(ptr+7)=7;
     *(ptr+8)=8;

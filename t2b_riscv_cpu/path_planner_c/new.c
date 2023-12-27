@@ -103,7 +103,7 @@ int minDistance(int dist[], bool visited[]) {
 }
 
 // Function to print the shortest path from start to end and store it in path_planned
-void findShortestPath(uint8_t parent[], int end, uint8_t path_planned[], uint8_t* idx) {
+void findShortestPath(uint8_t parent[], int end, int path_planned[], uint8_t* idx) {
     if (parent[end] == 255) {
         path_planned[(*idx)++] = end;
         return;
@@ -114,7 +114,7 @@ void findShortestPath(uint8_t parent[], int end, uint8_t path_planned[], uint8_t
 }
 
 //Function to find and print the shortest path using Dijkstra's algorithm
-void dijkstra(int *graph, int start, int end, uint8_t path_planned[], uint8_t* idx) {
+void dijkstra(int *graph, int start, int end, int path_planned[], uint8_t* idx) {
     uint8_t dist[VERTICES];  // Array to store the shortest distances from src to i
     // bool visited[VERTICES];
     uint8_t parent[VERTICES];  // Array to store the parents in the shortest path
@@ -184,13 +184,13 @@ int main(int argc, char const * argv[]) {
 #define END_POINT           (* (volatile uint8_t * ) 0x02000004)
 #define NODE_POINT          (* (volatile uint8_t * ) 0x02000008)
 #define CPU_DONE            (* (volatile uint8_t * ) 0x0200000c)
-#define ARRAY_ADDRESS       ((volatile uint8_t *)0x02000010)
+#define ARRAY_ADDRESS       (* (volatile uint8_t * ) 0x02000010)
     int *graph = (int *)ARRAY_ADDRESS;
 
 #endif
 
     // array to store the planned path
-    uint8_t path_planned[32];
+    int path_planned[32];
     // index to keep track of the path_planned array
     uint8_t idx = 0;
 

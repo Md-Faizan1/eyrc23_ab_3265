@@ -1,5 +1,5 @@
 Flow report for t2b_riscv_cpu
-Wed Nov 22 22:08:50 2023
+Wed Dec 20 11:48:01 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 22 22:08:49 2023       ;
+; Flow Status                        ; Successful - Wed Dec 20 11:48:01 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; t2b_riscv_cpu                               ;
 ; Top-level Entity Name              ; t2b_riscv_cpu                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 7,071                                       ;
-;     Total combinational functions  ; 6,079                                       ;
+; Total logic elements               ; 7,054                                       ;
+;     Total combinational functions  ; 6,062                                       ;
 ;     Dedicated logic registers      ; 3,104                                       ;
 ; Total registers                    ; 3104                                        ;
 ; Total pins                         ; 164                                         ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/22/2023 22:07:12 ;
+; Start date & time ; 12/20/2023 11:46:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; t2b_riscv_cpu       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 10995770589203.170067103231420         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 233497581451844.170305301715904        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -108,8 +108,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:37     ; 1.0                     ; 4931 MB             ; 00:01:00                           ;
-; Total                ; 00:01:37     ; --                      ; --                  ; 00:01:00                           ;
+; Analysis & Synthesis ; 00:01:04     ; 1.0                     ; 4873 MB             ; 00:00:55                           ;
+; Total                ; 00:01:04     ; --                      ; --                  ; 00:00:55                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,7 +118,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-PVERQCLP  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; FAIZAN-PC        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
