@@ -15,9 +15,9 @@ Warning: The error due to compatibility will not be entertained.
 
 // t2b_riscv_cpu module declaration
 module t2b_riscv_cpu (
-    input clk, reset,
+    input clk, reset,                                   //for resetting the CPU reset is defined here
     input Ext_MemWrite,
-    input [31:0] Ext_WriteData, Ext_DataAdr,
+    input [31:0] Ext_WriteData, Ext_DataAdr,       
     output MemWrite,
     output [31:0] WriteData, DataAdr, ReadData
 );
