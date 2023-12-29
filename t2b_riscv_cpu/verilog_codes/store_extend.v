@@ -10,8 +10,8 @@ module store_extend (
 always @(*) begin
     case(sel)
         2'b10: data = y;
-        2'b00: data = {24'b0, y[7:0]};
-        2'b01: data = {16'b0, y[15:0]};
+        2'b00: data = {{24{1'b0}}, y[7:0]};
+        2'b01: data = {{16{1'b0}}, y[15:0]};
         default: data = y;
     endcase
 end

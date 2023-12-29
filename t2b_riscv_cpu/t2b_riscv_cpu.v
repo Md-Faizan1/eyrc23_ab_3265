@@ -15,9 +15,9 @@ Warning: The error due to compatibility will not be entertained.
 
 // t2b_riscv_cpu module declaration
 module t2b_riscv_cpu (
-    input clk, reset,                                   //for resetting the CPU reset is defined here
+    input clk, reset,
     input Ext_MemWrite,
-    input [31:0] Ext_WriteData, Ext_DataAdr,       
+    input [31:0] Ext_WriteData, Ext_DataAdr,
     output MemWrite,
     output [31:0] WriteData, DataAdr, ReadData
 );
@@ -33,7 +33,7 @@ assign funct = Instr[14:12];
 // instantiate processor and memories
 riscv_cpu rvsingle (clk, reset, PC, Instr, MemWrite_rv32, DataAdr_rv32, WriteData_rv32, ReadData);
 instr_mem imem (PC, Instr);
-data_mem dmem (clk, MemWrite, DataAdr, WriteData, ReadData);
+data_mem dmem (clk, MemWrite, DataAdr, WriteData, ReadData, funct);
 
 // output assignments
 assign MemWrite = (Ext_MemWrite && reset) ? 1 : MemWrite_rv32;

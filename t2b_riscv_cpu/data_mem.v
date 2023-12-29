@@ -1,15 +1,44 @@
 
 // data_mem.v - data memory for single-cycle RISC-V CPU
 
+// module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
+//     input       clk, wr_en,
+//     input       [ADDR_WIDTH-1:0] wr_addr, wr_data,
+//     output      [DATA_WIDTH-1:0] rd_data_mem
+// );
+
+// // array of 64 32-bit words or data
+// reg [DATA_WIDTH-1:0] data_ram [0:MEM_SIZE-1];
+
+// // combinational read logic
+// // word-aligned memory access
+// assign rd_data_mem = data_ram[wr_addr[DATA_WIDTH-1:0] % 64];
+
+// // synchronous write logic
+// always @(posedge clk) begin
+//     if (wr_en) data_ram[wr_addr[DATA_WIDTH-25:0] % 64] <= wr_data[7:0];
+//      if (wr_en) data_ram[wr_addr[DATA_WIDTH-17:8] % 64] <= wr_data[15:8];
+//       if (wr_en) data_ram[wr_addr[DATA_WIDTH-9:16] % 64] <= wr_data[23:16];
+//        if (wr_en) data_ram[wr_addr[DATA_WIDTH-1:24] % 64] <= wr_data[31:24];
+// end
+
+// endmodule
+
+// 2 ---------------------------------------------------------------------------------------
+
+
+// data_mem.v - data memory for single-cycle RISC-V CPU
 
 module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
     input       clk, wr_en,
     input       [ADDR_WIDTH-1:0] wr_addr, wr_data,
-    output      [DATA_WIDTH-1:0] rd_data_mem
+    output      [DATA_WIDTH-1:0] rd_data_mem,
+    input       [2:0] funct
 );
 
 // array of 64 32-bit words or data
 reg [DATA_WIDTH-1:0] data_ram [0:MEM_SIZE-1];
+
 
 
  initial begin
@@ -116,18 +145,16 @@ end
 
 // assign rd_data_mem[31:0] = temp_data[31:0];
 
-
-
-
-
-assign rd_data_mem[31:0] = (((wr_addr%4 == 0) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 127) : ((wr_addr%4 == 1) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 65280)>> 8 : ((wr_addr%4 == 2) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 16711680) >> 16 : (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 4278190080) >> 24))));
-
-
-
+assign rd_data_mem[31:0] =((funct==010) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64]) : (((wr_addr%4 == 0) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 127) : ((wr_addr%4 == 1) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 65280)>> 8 : ((wr_addr%4 == 2) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 16711680) >> 16 : (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 4278190080) >> 24)))));
 
 // synchronous write logic
+
+
 always @(posedge clk) begin
     if(wr_en) begin
+
+        if(funct == 000) begin
+        
         if (wr_addr%4 == 0)
             data_ram[wr_addr[DATA_WIDTH-1:2] % 64] <= (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] | (wr_data[31:0]));
         else if (wr_addr%4 == 1)
@@ -137,8 +164,13 @@ always @(posedge clk) begin
         else
             data_ram[wr_addr[DATA_WIDTH-1:2] % 64] <= (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] | (wr_data[31:0] << 24));
         // data_ram[wr_addr[DATA_WIDTH-1:2] % 64] <= wr_data[31:0];
-        
+        end
 
+        else begin
+
+            data_ram[wr_addr[DATA_WIDTH-1:2] % 64] <= wr_data;
+
+end
 end
 end
 
