@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dD:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim
 vadder
-Z1 !s110 1703056063
+Z1 !s110 1703662209
 !i10b 1
 !s100 jXE67fZjiCj2W4l?`i:H?0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1703056063.000000
+Z6 !s108 1703662209.000000
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/adder.v|
 !i113 1
@@ -50,7 +50,7 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1703056062.000000
+R6
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu.v|
 !i113 1
@@ -58,7 +58,7 @@ R7
 R8
 R9
 valu_decoder
-Z11 !s110 1703056062
+R1
 !i10b 1
 !s100 ei@^4na4@[Fi6jIzg2jOV0
 R2
@@ -74,7 +74,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu_decoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu_decoder.v|
 !i113 1
@@ -82,7 +82,7 @@ R7
 R8
 R9
 vcontroller
-R11
+R1
 !i10b 1
 !s100 j0?1Wa6<11?AIhI_]6]NY3
 R2
@@ -98,7 +98,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/controller.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/controller.v|
 !i113 1
@@ -108,16 +108,16 @@ R9
 vdata_mem
 R1
 !i10b 1
-!s100 _0`Xa3Z]mQ;=K`Z;QNH:82
+!s100 82JT4G:SZJNbn8e?Sno<G0
 R2
-IEY1[McWO^dL1TlbJnQhF93
+I9OQkKo02PR_HDPja:mCAk0
 R3
 R0
-w1703049954
+w1703656088
 8D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/data_mem.v
 FD:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/data_mem.v
 !i122 13
-L0 4 148
+L0 32 99
 R5
 r1
 !s85 0
@@ -127,10 +127,10 @@ R6
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/data_mem.v|
 !i113 1
 R7
-Z12 !s92 -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu
+Z10 !s92 -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu
 R9
 vdatapath
-R11
+R1
 !i10b 1
 !s100 nE@]`Qk4:eUXchZY_;F<>0
 R2
@@ -146,7 +146,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/datapath.v|
 !i113 1
@@ -154,7 +154,7 @@ R7
 R8
 R9
 vimm_extend
-R11
+R1
 !i10b 1
 !s100 1mfV]dW94zk`j5Lon21Li2
 R2
@@ -170,7 +170,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/imm_extend.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/imm_extend.v|
 !i113 1
@@ -178,7 +178,7 @@ R7
 R8
 R9
 vinstr_mem
-R1
+Z11 !s110 1703662210
 !i10b 1
 !s100 34=WC5DP3=:>R;n=f:<;01
 R2
@@ -194,15 +194,15 @@ R5
 r1
 !s85 0
 31
-R6
+Z12 !s108 1703662210.000000
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/instr_mem.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/instr_mem.v|
 !i113 1
 R7
-R12
+R10
 R9
 vload_extend
-R11
+R1
 !i10b 1
 !s100 [;KH[ojGgCon8KF2X7?0D3
 R2
@@ -218,7 +218,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/load_extend.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/load_extend.v|
 !i113 1
@@ -226,7 +226,7 @@ R7
 R8
 R9
 vmain_decoder
-R11
+R1
 !i10b 1
 !s100 4iWR6YANJ3_QTHIH17Qde0
 R2
@@ -242,7 +242,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/main_decoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/main_decoder.v|
 !i113 1
@@ -250,7 +250,7 @@ R7
 R8
 R9
 vmux2
-R11
+R1
 !i10b 1
 !s100 O<Ld`3jD6QL?6PIEe_QAk1
 R2
@@ -266,7 +266,7 @@ R5
 r1
 !s85 0
 31
-R10
+Z14 !s108 1703662208.000000
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux2.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux2.v|
 !i113 1
@@ -274,7 +274,7 @@ R7
 R8
 R9
 vmux4
-R11
+Z15 !s110 1703662208
 !i10b 1
 !s100 V4YdM>hK^I8CMb?cH8Cej3
 R2
@@ -290,7 +290,7 @@ R5
 r1
 !s85 0
 31
-R10
+R14
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux4.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux4.v|
 !i113 1
@@ -298,7 +298,7 @@ R7
 R8
 R9
 vreg_file
-R11
+R15
 !i10b 1
 !s100 z2]InGk0[gjzdlc7_WWYI1
 R2
@@ -314,7 +314,7 @@ R5
 r1
 !s85 0
 31
-R10
+R14
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reg_file.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reg_file.v|
 !i113 1
@@ -322,7 +322,7 @@ R7
 R8
 R9
 vreset_ff
-R11
+R15
 !i10b 1
 !s100 c1I5T0L8]]ZK0dn2hg0_F0
 R2
@@ -338,7 +338,7 @@ R5
 r1
 !s85 0
 31
-Z14 !s108 1703056061.000000
+R14
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v|
 !i113 1
@@ -346,7 +346,7 @@ R7
 R8
 R9
 vriscv_cpu
-R1
+R11
 !i10b 1
 !s100 l3`<R85a]Vj@]441^OC>`3
 R2
@@ -367,10 +367,10 @@ R6
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/riscv_cpu.v|
 !i113 1
 R7
-R12
+R10
 R9
 vstore_extend
-!s110 1703056061
+R15
 !i10b 1
 !s100 <S3kgYM56?_9QeUb74ZQY1
 R2
@@ -394,14 +394,14 @@ R7
 R8
 R9
 vt2b_riscv_cpu
-R1
+R11
 !i10b 1
-!s100 dcz:]g6:=08Q3LQH7mDfM2
+!s100 @IHWaZmfk2=lDT8CeHQ<O0
 R2
-IAFiHddEbQNK;h=TdUi]]G0
+IW^WElMk<^R5DX4UTbE`4<3
 R3
 R0
-R4
+w1703662043
 8D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v
 FD:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v
 !i122 15
@@ -410,15 +410,15 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v|
 !i113 1
 R7
-R12
+R10
 R9
 vtb
-R1
+R11
 !i10b 1
 !s100 YmX5GZ5knY=g?g6]ho1EK0
 R2
@@ -434,7 +434,7 @@ R5
 r1
 !s85 0
 31
-R6
+R12
 !s107 D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim|D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v|
 !i113 1

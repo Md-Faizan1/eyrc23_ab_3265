@@ -1,5 +1,5 @@
 Flow report for t2b_riscv_cpu
-Wed Dec 20 11:48:01 2023
+Wed Dec 27 12:57:59 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 20 11:48:01 2023       ;
+; Flow Status                        ; Successful - Wed Dec 27 12:57:59 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; t2b_riscv_cpu                               ;
 ; Top-level Entity Name              ; t2b_riscv_cpu                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 7,054                                       ;
-;     Total combinational functions  ; 6,062                                       ;
+; Total logic elements               ; 7,570                                       ;
+;     Total combinational functions  ; 4,562                                       ;
 ;     Dedicated logic registers      ; 3,104                                       ;
 ; Total registers                    ; 3104                                        ;
 ; Total pins                         ; 164                                         ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/20/2023 11:46:57 ;
+; Start date & time ; 12/27/2023 12:57:27 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; t2b_riscv_cpu       ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 233497581451844.170305301715904        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 233497581451844.170366204715832        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -108,8 +108,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:04     ; 1.0                     ; 4873 MB             ; 00:00:55                           ;
-; Total                ; 00:01:04     ; --                      ; --                  ; 00:00:55                           ;
+; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4840 MB             ; 00:00:34                           ;
+; Total                ; 00:00:32     ; --                      ; --                  ; 00:00:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

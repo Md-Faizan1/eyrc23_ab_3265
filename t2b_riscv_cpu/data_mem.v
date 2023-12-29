@@ -39,6 +39,7 @@ module data_mem #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 32, MEM_SIZE = 64) (
 reg [DATA_WIDTH-1:0] data_ram [0:MEM_SIZE-1];
 
 
+
  initial begin
     data_ram[0]  = 32'b0;
     data_ram[1]  = 32'b0;
@@ -105,9 +106,51 @@ reg [DATA_WIDTH-1:0] data_ram [0:MEM_SIZE-1];
     data_ram[62] = 32'b0;
     data_ram[63] = 32'b0;
 end
+
+
 // combinational read logic
 // word-aligned memory access
-assign rd_data_mem[31:0] = data_ram[wr_addr[DATA_WIDTH-1:2] % MEM_SIZE];
+// reg [5:0] s_b = 6'b0;
+// reg [31:0] bits = {24'b0,8'b1};
+// always @(posedge clk) begin
+
+
+//  s_b = ( (wr_addr % 4) * 1'd8); 
+
+//  bits = bits << s_b;
+// end
+
+// assign rd_data_mem[31:0] = (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & bits) >> s_b;
+
+//  reg [31:0] temp_data;
+
+// always @(posedge clk) begin
+//     case (wr_addr % 4)
+//         0: temp_data = (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & {24'b0, 8'b1});
+//         1: temp_data = (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & {16'b0, 8'b1, 8'b0}) >> 8;
+//         2: temp_data = (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & {8'b0, 8'b1, 16'b0}) >> 16;
+//         3: temp_data = (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & {8'b1, 24'b0}) >> 24;
+//     endcase
+// end
+
+// always @(posedge clk) begin
+//     case (wr_addr % 4)
+//         0: temp_data[31:0] <= (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 127);
+//         1: temp_data[31:0] <= ((data_ram[wr_addr[DATA_WIDTH-1:2] % 64] >> 8) & 65280);
+//         2: temp_data[31:0] <= ((data_ram[wr_addr[DATA_WIDTH-1:2] % 64] >> 16) & 16711680);
+//         3: temp_data[31:0] <= ((data_ram[wr_addr[DATA_WIDTH-1:2] % 64] >> 24) & 4278190080);
+//     endcase
+// end
+
+// assign rd_data_mem[31:0] = temp_data[31:0];
+
+
+
+
+
+assign rd_data_mem[31:0] = (((wr_addr%4 == 0) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 127) : ((wr_addr%4 == 1) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 65280)>> 8 : ((wr_addr%4 == 2) ? (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 16711680) >> 16 : (data_ram[wr_addr[DATA_WIDTH-1:2] % 64] & 4278190080) >> 24))));
+
+
 
 
 // synchronous write logic

@@ -12,189 +12,189 @@
 # 
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/store_extend.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:41 on Dec 20,2023
+# Start time: 13:00:08 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/store_extend.v 
 # -- Compiling module store_extend
 # 
 # Top level modules:
 # 	store_extend
-# End time: 12:37:41 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:08 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:41 on Dec 20,2023
+# Start time: 13:00:08 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reset_ff.v 
 # -- Compiling module reset_ff
 # 
 # Top level modules:
 # 	reset_ff
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:01
+# End time: 13:00:08 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reg_file.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:08 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/reg_file.v 
 # -- Compiling module reg_file
 # 
 # Top level modules:
 # 	reg_file
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:08 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux4.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:08 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux4.v 
 # -- Compiling module mux4
 # 
 # Top level modules:
 # 	mux4
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:08 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:08 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/mux2.v 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/main_decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/main_decoder.v 
 # -- Compiling module main_decoder
 # 
 # Top level modules:
 # 	main_decoder
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/load_extend.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/load_extend.v 
 # -- Compiling module load_extend
 # 
 # Top level modules:
 # 	load_extend
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/imm_extend.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/imm_extend.v 
 # -- Compiling module imm_extend
 # 
 # Top level modules:
 # 	imm_extend
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/controller.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/controller.v 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu_decoder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu_decoder.v 
 # -- Compiling module alu_decoder
 # 
 # Top level modules:
 # 	alu_decoder
-# End time: 12:37:42 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:42 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 12:37:43 on Dec 20,2023, Elapsed time: 0:00:01
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:43 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/verilog_codes/adder.v 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 12:37:43 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/data_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:43 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/data_mem.v 
 # -- Compiling module data_mem
 # 
 # Top level modules:
 # 	data_mem
-# End time: 12:37:43 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:09 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/riscv_cpu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:43 on Dec 20,2023
+# Start time: 13:00:09 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/riscv_cpu.v 
 # -- Compiling module riscv_cpu
 # 
 # Top level modules:
 # 	riscv_cpu
-# End time: 12:37:43 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:10 on Dec 27,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:43 on Dec 20,2023
+# Start time: 13:00:10 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/t2b_riscv_cpu.v 
 # -- Compiling module t2b_riscv_cpu
 # 
 # Top level modules:
 # 	t2b_riscv_cpu
-# End time: 12:37:43 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:10 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/instr_mem.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:43 on Dec 20,2023
+# Start time: 13:00:10 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/instr_mem.v 
 # -- Compiling module instr_mem
 # 
 # Top level modules:
 # 	instr_mem
-# End time: 12:37:43 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:10 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim {D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:37:43 on Dec 20,2023
+# Start time: 13:00:10 on Dec 27,2023
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim" D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 12:37:43 on Dec 20,2023, Elapsed time: 0:00:00
+# End time: 13:00:10 on Dec 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 12:37:43 on Dec 20,2023
+# Start time: 13:00:10 on Dec 27,2023
 # Loading work.tb
 # Loading work.t2b_riscv_cpu
 # Loading work.riscv_cpu
@@ -217,13 +217,89 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: f8721  Hostname: FAIZAN-PC  ProcessID: 17660
-#           Attempting to use alternate WLF file "./wlftrq7ijf".
+#           Attempting to use alternate WLF file "./wlftt5k7sg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftrq7ijf
+#           Using alternate file: ./wlftt5k7sg
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 5 ms
-# End time: 12:38:33 on Dec 20,2023, Elapsed time: 0:00:50
-# Errors: 0, Warnings: 2
+# Expected NODE POINT =  0, Actual NODE POINT =          0
+# No Error in this Node Point.
+# 
+# Expected NODE POINT =  1, Actual NODE POINT =          1
+# No Error in this Node Point.
+# 
+# Expected NODE POINT =  2, Actual NODE POINT =          2
+# No Error in this Node Point.
+# 
+# Expected NODE POINT =  8, Actual NODE POINT =          3
+# Error Count            1 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  7, Actual NODE POINT =          4
+# Error Count            2 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =         30
+# Error Count            3 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          6
+# Error Count            4 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          7
+# Error Count            5 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          8
+# Error Count            6 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          9
+# Error Count            7 -> Mismatch in Node Points, Check your design.
+# 
+# Error(s) encountered, please check your design!
+# ** Note: $stop    : D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v(89)
+#    Time: 995 ns  Iteration: 1  Instance: /tb
+# Break in Module tb at D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v line 89
+add wave -r /*
+add wave -position 2  /tb/uut/dmem/data_ram
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          0
+# No Error in this Node Point.
+# 
+# Expected NODE POINT =  1, Actual NODE POINT =          1
+# No Error in this Node Point.
+# 
+# Expected NODE POINT =  2, Actual NODE POINT =          2
+# No Error in this Node Point.
+# 
+# Expected NODE POINT =  8, Actual NODE POINT =          3
+# Error Count            1 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  7, Actual NODE POINT =          4
+# Error Count            2 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =         30
+# Error Count            3 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          6
+# Error Count            4 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          7
+# Error Count            5 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          8
+# Error Count            6 -> Mismatch in Node Points, Check your design.
+# 
+# Expected NODE POINT =  0, Actual NODE POINT =          9
+# Error Count            7 -> Mismatch in Node Points, Check your design.
+# 
+# Error(s) encountered, please check your design!
+# ** Note: $stop    : D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v(89)
+#    Time: 995 ns  Iteration: 1  Instance: /tb
+# Break in Module tb at D:/E-yantra_work/eyrc23_ab_3265/t2b_riscv_cpu/simulation/modelsim/tb.v line 89
+# End time: 13:04:24 on Dec 27,2023, Elapsed time: 0:04:14
+# Errors: 0, Warnings: 0
