@@ -1,0 +1,63 @@
+module path_planned( clk_50M, MemWrite, WriteData, DataAdr, ReadData, pathnodes, index, path1,path2,path3);
+   input clk_50M;
+
+       input  [7:0] index;
+
+        output reg [79:0] pathnodes;
+            input [31:0] WriteData, DataAdr, ReadData;
+              input MemWrite;
+ output reg [7:0]  path1;
+   output reg [7:0]  path2;
+    output reg [7:0]  path3;
+
+reg [31:0] counter = 0;
+
+
+always @(posedge clk_50M) begin
+
+    
+
+//     if((DataAdr == 32'h02000008) && (counter == 0)) begin
+//             // pathnodes[7:0] <= WriteData;
+//             path1 <= WriteData;
+//             counter <= counter +1;
+//     end
+
+//     else if((DataAdr == 32'h02000008) && (counter == 1)) begin
+//         // pathnodes[15:8] <= WriteData;
+//         path2 <= WriteData;
+//             counter <= counter +1;
+//     end
+
+//        else if((DataAdr == 32'h02000008) && (counter == 2)) begin
+//         // pathnodes[23:16] <= WriteData;
+//         path3 <= WriteData;
+//             counter <= counter +1;
+//        end
+//         else if((DataAdr == 32'h02000008) && (counter == 3)) begin
+//         pathnodes[31:24] <= WriteData;
+//             counter <= counter +1;
+//        end
+
+// end
+endmodule
+    //     else if((DataAdr == 32'h02000008) && (counter == 1)) begin
+    //     pathnodes[15:8] <= WriteData;
+    //         counter <= counter +1;
+    //    end
+    //     else if((DataAdr == 32'h02000008) && (counter == 1)) begin
+    //     pathnodes[15:8] <= WriteData;
+    //         counter <= counter +1;
+    //    end
+    //     else if((DataAdr == 32'h02000008) && (counter == 1)) begin
+    //     pathnodes[15:8] <= WriteData;
+    //         counter <= counter +1;
+    //    end
+    //     else if((DataAdr == 32'h02000008) && (counter == 1)) begin
+    //     pathnodes[15:8] <= WriteData;
+    //         counter <= counter +1;
+    //    end
+
+
+
+
