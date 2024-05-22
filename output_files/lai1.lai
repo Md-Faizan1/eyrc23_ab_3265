@@ -1,0 +1,25 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: 10CL025(Y|Z)/EP3C25/EP4CE22 (0x020F30DD)" sof_file="D:/E-Yantra_Final/minimum_pins/minimum_pins/3265#1_ab#3265_Task4/ab#3265_Task4/output_files/AB_3265_Task4.sof">
+  <display_attributes/>
+  <instance compilation_mode="normal" entity_name="sld_multitap" is_auto_node="true" name="auto_lai_0" type="generic">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="7" version="0"/>
+    <core_parameters bank_count="1" capture_mode="state" clock="adc_sck" crc_value="B6BA" enable_auto_setup="false" enable_plug_run="false" max_freq="100" pin_count="6" power_up_state="tristate" tdm_rate="1"/>
+    <pins>
+      <pin io_standard="2.5 V" location="" name="altera_reserved_lai_0_0"/>
+      <pin io_standard="2.5 V" location="" name="altera_reserved_lai_0_1"/>
+      <pin io_standard="2.5 V" location="" name="altera_reserved_lai_0_2"/>
+      <pin io_standard="2.5 V" location="" name="altera_reserved_lai_0_3"/>
+      <pin io_standard="2.5 V" location="" name="altera_reserved_lai_0_4"/>
+      <pin io_standard="2.5 V" location="" name="altera_reserved_lai_0_5"/>
+    </pins>
+    <banks>
+      <bank name="Bank 0">
+        <signal name="" type="unused"/>
+        <signal name="" type="unused"/>
+        <signal name="" type="unused"/>
+        <signal name="" type="unused"/>
+        <signal name="" type="unused"/>
+        <signal name="" type="unused"/>
+      </bank>
+    </banks>
+  </instance>
+</session>
