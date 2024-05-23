@@ -42,15 +42,18 @@ FPGA board, RISC-V microprocessor, UART Protocol
 ### Working 
 
 1. The Robot recieves message through bluetooth to reach a desired location.
-2. 
-3. Attach the line sensors to the front of the robot.
-4. Connect the motor driver and sensors to the microcontroller.
-5. Connect the Bluetooth/WiFi module to the microcontroller.
+2. The path is calculated using the RISC-V basssed CPU using Dijkstra algorithm.
+3. The path calculated is extracted from the ram memory.
+4. The line follower verilog module then controls both the motor's speed .
+5. If any object is detected then then it sends a message and glows the LED on it.
+6. The robot can pick and drop the object(made up of metal) to some other desired location.
 
-### Software Setup
+### About The CPU
 
-2. Open the project in your development environment.
-3. Upload the provided code to your microcontroller.
+2. The whole CPU is based on RISC-V ISA.
+3. The cpu and the memory is built using verilog on the FPGA.
+4. The The path calculation program is written in C language.
+5. The program is executed on the CPU using start and end points as arguments.
 
 ## Usage
 
