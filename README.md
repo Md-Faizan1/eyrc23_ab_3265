@@ -4,8 +4,8 @@ This project involves designing and implementing a Line Follower Robot using FPG
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
+- [Introduction](#Introduction)
+- [Features](#Features)
 - [Hardware Requirements](#hardware-requirements)
 - [Software Requirements](#software-requirements)
 - [Installation](#installation)
@@ -21,20 +21,20 @@ The Line Follower Robot is an autonomous robot capable of following a line drawn
 
 ## Features
 
-- **Quick Path Calculation** The robot calculates the shortest path in 
-- **:** The robot begins operation upon receiving a START message.
-- **Real-time Adjustment:** The robot can adjust its path in real-time based on sensor input.
+- **Quick Path Calculation** The robot calculates the shortest path in few milliseconds 
+- **Blutooth Connection:** The robot begins can recive the messages or can send messsages through bluetooth.
+- **Customizable:** Any graph can be traversed after adding the nodes of the graph.
 
 ## Hardware Requirements
 
-- Microcontroller (e.g., Arduino, Raspberry Pi)
-- Line sensors (e.g., IR sensors)
-- Motor driver (e.g., L298N)
-- DC motors
-- Chassis for the robot
-- Wheels
-- Battery pack
-- Bluetooth or WiFi module (for receiving the START message)
+- De0-Nano FPGA Board
+- Line Follower Sensor
+- Buck Converter
+- L9110S DC Motor Driver
+- N20 Motors
+- N20 Wheels
+- 7.4V 2S Li-ion battery 2000mAh
+- Bluetooth Module (HC-05)
 
 ## Software Requirements
 
