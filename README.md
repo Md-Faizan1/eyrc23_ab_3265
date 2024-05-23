@@ -3,22 +3,7 @@
 This project involves designing and implementing a Line Follower Robot using FPGA. The robot is designed to follow the shortest path between two points calculated by the RISC-V CPU. The Robot follows the path based on the values from the sensors.
 # Bot Image
 
-![WhatsApp Image 2024-05-23 at 8 05 11 PM](https://github.com/Md-Faizan1/eyrc23_ab_3265/assets/132780190/9cde914c-7dff-44f1-aa02-77b3599f6d75)
-
-## Table of Contents
-
-- [Introduction](#Introduction)
-- [Features](#Features)
-- [Hardware Requirements](#hardware-requirements)
-- [Software Requirements](#software-requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Code Overview](#code-overview)
-- [Contributing](#contributing)
-
-
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+![WhatsApp Image 2024-05-23 at 8 05 11 PM](https://github.com/Md-Faizan1/eyrc23_ab_3265/assets/132780190/9cde914c-7dff-44f1-aa02-77b3599f6d75
 
 ## Introduction
 
@@ -60,13 +45,6 @@ FPGA board, RISC-V microprocessor, UART Protocol
 4. The The path calculation program is written in C language.
 5. The program is executed on the CPU using start and end points as arguments.
 
-
-## Code Overview
-
-
-### Main Code
-
-The main code is responsible for:
 
 - Initializing the sensors and motor driver
 - Continuously reading sensor data
