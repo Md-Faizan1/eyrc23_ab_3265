@@ -53,7 +53,8 @@ FPGA board, RISC-V microprocessor, UART Protocol
 3. The data which was recievd on the bot was corrupted till it reached, so we have to use handshaking between the reciever and the modules. 
 
 ## Contributors 
-Md_Faizan1
+@Md-Faizan1
+@sudhanshur555
 
 
 
