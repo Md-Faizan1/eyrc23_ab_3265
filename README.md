@@ -3,7 +3,8 @@
 This project involves designing and implementing a Line Follower Robot using FPGA. The robot is designed to follow the shortest path between two points calculated by the RISC-V CPU. The Robot follows the path based on the values from the sensors.
 # Bot Image
 
-![WhatsApp Image 2024-05-23 at 8 05 11 PM](https://github.com/Md-Faizan1/eyrc23_ab_3265/assets/132780190/9cde914c-7dff-44f1-aa02-77b3599f6d75
+
+![WhatsApp Image 2024-05-23 at 8 05 11 PM](https://github.com/Md-Faizan1/eyrc23_ab_3265/assets/132780190/bc5a022d-dc98-4adc-a057-3e24241d220e)
 
 ## Introduction
 
