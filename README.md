@@ -17,7 +17,7 @@ This project involves designing and implementing a Line Follower Robot using FPG
 
 ## Introduction
 
-The Line Follower Robot is an autonomous robot capable of following a line drawn on the floor. This project is ideal for understanding basic robotics, sensor integration, and control systems.
+The Line Follower Robot is an autonomous robot capable of following a graph. The whole robot is programmed using verilog and the path calculation algorithm using C.
 
 ## Features
 
@@ -38,14 +38,8 @@ The Line Follower Robot is an autonomous robot capable of following a line drawn
 
 ## Software Requirements
 
-- Arduino IDE or other suitable development environment
-- Python (if using Raspberry Pi)
-- Libraries:
-  - Motor driver library
-  - Sensor reading library
-  - Communication protocol library (e.g., `pySerial` for Python)
-
-## Installation
+- Intel Quartus
+- Modelsim Altera(for simulation)
 
 ### Hardware Setup
 
