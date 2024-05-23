@@ -50,9 +50,11 @@ FPGA board, RISC-V microprocessor, UART Protocol
 
 1. The ram memory size was a constraint so we have to use bitmasking techniques to store data efficiently.
 2. The debugging procedure was taime taking as we have to observe the individual signals using signal tap.
+3. The data which was recievd on the bot was corrupted till it reached, so we have to use handshaking between the reciever and the modules. 
 
 ## Contributors 
-@Md_Faizan1
+Md_Faizan1
+
 
 
 
