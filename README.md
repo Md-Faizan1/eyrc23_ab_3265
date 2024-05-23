@@ -21,7 +21,7 @@ The Line Follower Robot is an autonomous robot capable of following a graph. The
 
 ## Technology Used
 
-FPGA board, RISC-V microprocessor, Uart Protocol 
+FPGA board, RISC-V microprocessor, UART Protocol 
 
 ## Hardware Requirements
 
@@ -39,22 +39,15 @@ FPGA board, RISC-V microprocessor, Uart Protocol
 - Intel Quartus
 - Modelsim Altera(for simulation)
 
-### Hardware Setup
+### Working 
 
-1. Assemble the robot chassis.
-2. Attach the motors to the chassis and connect them to the motor driver.
+1. The Robot recieves message through bluetooth to reach a desired location.
+2. 
 3. Attach the line sensors to the front of the robot.
 4. Connect the motor driver and sensors to the microcontroller.
 5. Connect the Bluetooth/WiFi module to the microcontroller.
 
 ### Software Setup
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/line-follower-robot.git
-    cd line-follower-robot
-    ```
 
 2. Open the project in your development environment.
 3. Upload the provided code to your microcontroller.
@@ -76,29 +69,4 @@ The main code is responsible for:
 - Adjusting motor speeds based on sensor input to follow the line
 - Handling the START message to initiate line following
 
-### Example Code Snippet
 
-```cpp
-#include <MotorDriver.h>
-#include <LineSensor.h>
-#include <CommunicationModule.h>
-
-void setup() {
-    // Initialize components
-    MotorDriver.init();
-    LineSensor.init();
-    CommunicationModule.init();
-}
-
-void loop() {
-    // Check for START message
-    if (CommunicationModule.receivedStartMessage()) {
-        while (true) {
-            // Read sensor values
-            int sensorValue = LineSensor.read();
-            
-            // Adjust motor speeds
-            MotorDriver.adjustMotors(sensorValue);
-        }
-    }
-}
