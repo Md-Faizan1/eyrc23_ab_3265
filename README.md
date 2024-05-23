@@ -12,6 +12,8 @@ This project involves designing and implementing a Line Follower Robot using FPG
 - [Usage](#usage)
 - [Code Overview](#code-overview)
 - [Contributing](#contributing)
+- ![WhatsApp Image 2024-05-23 at 8 05 11 PM](https://github.com/Md-Faizan1/eyrc23_ab_3265/assets/132780190/c27772ff-69be-4651-8d92-1f62cecc738f)
+
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
@@ -55,13 +57,9 @@ FPGA board, RISC-V microprocessor, UART Protocol
 4. The The path calculation program is written in C language.
 5. The program is executed on the CPU using start and end points as arguments.
 
-## Usage
-
-1. Power on the robot.
-2. Send the START message via the communication module.
-3. The robot will start following the line.
 
 ## Code Overview
+
 
 ### Main Code
 
