@@ -41,15 +41,18 @@ FPGA board, RISC-V microprocessor, UART Protocol
 
 ### About The CPU
 
-2. The whole CPU is based on RISC-V ISA.
-3. The cpu and the memory is built using verilog on the FPGA.
-4. The The path calculation program is written in C language.
-5. The program is executed on the CPU using start and end points as arguments.
+1. The whole CPU is based on RISC-V ISA.
+2. The cpu and the memory is built using verilog on the FPGA.
+3. The The path calculation program is written in C language.
+4. The program is executed on the CPU using start and end points as arguments.
 
+### Difiiculty Faced 
 
-- Initializing the sensors and motor driver
-- Continuously reading sensor data
-- Adjusting motor speeds based on sensor input to follow the line
-- Handling the START message to initiate line following
+1. The ram memory size was a constraint so we have to use bitmasking techniques to store data efficiently.
+2. The debugging procedure was taime taking as we have to observe the individual signals using signal tap.
+
+## Contributors 
+@Md_Faizan1
+
 
 
