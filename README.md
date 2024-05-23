@@ -19,11 +19,9 @@ This project involves designing and implementing a Line Follower Robot using FPG
 
 The Line Follower Robot is an autonomous robot capable of following a graph. The whole robot is programmed using verilog and the path calculation algorithm using C.
 
-## Features
+## Technology Used
 
-- **Quick Path Calculation** The robot calculates the shortest path in few milliseconds 
-- **Blutooth Connection:** The robot begins can recive the messages or can send messsages through bluetooth.
-- **Customizable:** Any graph can be traversed after adding the nodes of the graph.
+FPGA board, RISC-V microprocessor, Uart Protocol 
 
 ## Hardware Requirements
 
