@@ -1,4 +1,4 @@
-# FPGA Based Robot
+# Astro Tinker Bot under e-Yantra Robotics Competition IIT-B 2023-24
 
 This project involves designing and implementing a Line Follower Robot using FPGA. The robot is designed to follow the shortest path between two points calculated by the RISC-V CPU. The Robot follows the path based on the values from the sensors.
 # Bot Image
@@ -8,7 +8,7 @@ This project involves designing and implementing a Line Follower Robot using FPG
 
 ## Introduction
 
-The Line Follower Robot is an autonomous robot capable of following a graph. The whole robot is programmed using verilog and the path calculation algorithm using C.
+The Line Follower Robot is made to traverse a space station and fix faults. The whole robot is programmed using verilog and the path calculation algorithm using C.
 
 ## Technology Used
 
